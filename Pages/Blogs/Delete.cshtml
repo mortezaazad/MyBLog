@@ -1,0 +1,16 @@
+﻿@page
+@model MyBLog.Pages.Blogs.DeleteModel
+@{
+}
+
+
+<form class="form" method="post">
+    <input asp-for="Blog.Id" class="form-control" hidden />
+    <h5>Name:</h5>
+    <input asp-for="Blog.Name" class="form-control" />
+    <br />
+    <h5>Description:</h5>
+    <textarea asp-for="Blog.Description" class="form-control"></textarea>
+    <br />
+    <button class="btn btn-primary">Save</button>
+</form>
