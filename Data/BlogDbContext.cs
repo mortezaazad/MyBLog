@@ -19,6 +19,10 @@ namespace MyBLog.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Blog>()
+                .Property(b => b.TimeCreated)
+                .HasDefaultValueSql("GETDATE()");
+
             //Cascade
             modelBuilder.Entity<Post>()
                 .HasOne(p => p.Blog)
